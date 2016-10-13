@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<beans:bean id="apiSpec" class="com.leelab.riotapi.apis.RiotAPISpec">
+		<beans:property name="api_key" value="2bb3c69c-85bd-4e5e-addf-4ee9768b8505"/>
+		<beans:property name="version" value="v1.4"/>
+	</beans:bean>
+	
+	<beans:bean id="restClient" class="com.leelab.riotapi.APIGetter"/>
+	
+	<beans:bean id="api" class="com.leelab.riotapi.apis.RiotApi">
+		<beans:property name="apiSpec" ref="apiSpec"/>
+		<beans:property name="getter" ref="restClient"/>
+	</beans:bean>
+	
+</beans:beans>
