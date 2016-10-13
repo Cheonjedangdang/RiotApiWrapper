@@ -9,6 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.leelab.riotapi.apis.Locale;
 import com.leelab.riotapi.apis.RiotApi;
+import com.leelab.riotapi.apis.SummonerModule;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"/test.xml"})
@@ -21,7 +22,7 @@ public class HttpClientTest {
 	public void test() {
 		RiotApi api = context.getBean("api", RiotApi.class);
 		
-		api.getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
+		api.callModule(SummonerModule.class).getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
 	}
 	
 }
