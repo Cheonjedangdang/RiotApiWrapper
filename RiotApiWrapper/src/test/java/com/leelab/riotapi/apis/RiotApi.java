@@ -8,20 +8,8 @@ public class RiotApi {
 	private RiotAPISpec apiSpec;
 
 	public <T> T callModule(Class<T> clazz) {
-		try
-		{
-			T object = clazz.newInstance();
-			ReflectionUtils.setField(object, "spec", apiSpec);
-			return object;
-		}
-		catch (InstantiationException e)
-		{
-			e.printStackTrace();
-		}
-		catch (IllegalAccessException e) {
-			e.printStackTrace();
-		}
-		return null;
+		T object = ReflectionUtils.createInstance(ReflectionUtils.getConstructor(clazz, RiotAPISpec.class, RestClient.class), apiSpec, getter);
+		return object;
 	}
 	
 	public RestClient getGetter() {
