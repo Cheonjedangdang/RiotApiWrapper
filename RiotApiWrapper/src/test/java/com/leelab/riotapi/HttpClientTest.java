@@ -25,6 +25,12 @@ public class HttpClientTest {
 		
 		//api.callModule(ChampionModule.class).getChampion(Locale.KR, true);
 		api.callModule(SummonerModule.class).getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
+
+		SummonerModule module = api.callModule(SummonerModule.class);
+		
+		module.getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
+
+
 	}
 	
 }
