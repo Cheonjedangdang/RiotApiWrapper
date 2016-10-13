@@ -1,9 +1,12 @@
 package com.leelab.riotapi.utils;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+
+import com.leelab.riotapi.apis.RiotApi;
 
 public class ReflectionUtils {
 	
@@ -64,6 +67,46 @@ public class ReflectionUtils {
 			e.printStackTrace();
 		}
 		catch (IllegalAccessException e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public static <T> T createInstance(Constructor<T> constructor, Object...params) {
+		try
+		{
+			return (T) constructor.newInstance(params);
+		}
+		catch (InstantiationException e)
+		{
+			e.printStackTrace();
+		}
+		catch (IllegalAccessException e)
+		{
+			e.printStackTrace();
+		}
+		catch (IllegalArgumentException e)
+		{
+			e.printStackTrace();
+		} 
+		catch (InvocationTargetException e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	public static <T> Constructor<T> getConstructor(Class<T> clazz, Class<?>...paramTypes) {
+		try
+		{
+			return clazz.getConstructor(paramTypes);
+		}
+		catch (NoSuchMethodException e)
+		{
+			e.printStackTrace();
+		}
+		catch (SecurityException e)
 		{
 			e.printStackTrace();
 		}

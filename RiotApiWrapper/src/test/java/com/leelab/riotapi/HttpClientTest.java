@@ -22,7 +22,10 @@ public class HttpClientTest {
 	public void test() {
 		RiotApi api = context.getBean("api", RiotApi.class);
 		
-		api.callModule(SummonerModule.class).getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
+		SummonerModule module = api.callModule(SummonerModule.class);
+		
+		module.getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
+
 	}
 	
 }

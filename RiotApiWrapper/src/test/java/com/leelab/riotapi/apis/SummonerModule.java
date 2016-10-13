@@ -1,16 +1,22 @@
 package com.leelab.riotapi.apis;
 
-public class SummonerModule implements APIModule {
-	private RiotAPISpec spec;
-	
-	public void getSummonerByName(Locale locale, String summonerName) {
-		System.out.println("=====================================================================================");
-		System.out.println(spec.generate(locale)+"/summoner/by-name/"+summonerName+"?api_key="+spec.getApi_key());
-		System.out.println("=====================================================================================");
-	}
+import org.json.simple.JSONObject;
 
-	@Override
-	public void setAPISpec(RiotAPISpec spec) {
-		this.spec = spec;
+import com.leelab.riotapi.RestClient;
+
+public class SummonerModule extends APIModule {
+	
+	public SummonerModule(RiotAPISpec spec, RestClient client) {
+		super(spec, client);
+	}
+	
+	public String getSummonerByName(Locale locale, String summonerName) {
+		JSONObject obj = getClient().request(getSpec().generate(locale)+"/summoner/by-name/"+summonerName+"?api_key="+getSpec().getApi_key());
+		System.out.println(obj.toJSONString());
+		return "";
+	}
+	
+	public String getSummonerById(Locale locale, String summonerId) {
+		return getSpec().generate(locale)+"/summoner/"+summonerId+"?api_key="+getSpec().getApi_key();
 	}
 }
