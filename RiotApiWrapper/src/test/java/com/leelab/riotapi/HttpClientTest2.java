@@ -14,7 +14,7 @@ import com.leelab.riotapi.apis.SummonerModule;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"/test.xml"})
-public class HttpClientTest {
+public class HttpClientTest2 {
 	
 	@Autowired
 	ApplicationContext context;
@@ -23,14 +23,8 @@ public class HttpClientTest {
 	public void test() {
 		RiotApi api = context.getBean("api", RiotApi.class);
 		
-		//api.callModule(ChampionModule.class).getChampion(Locale.KR, true);
-		api.callModule(SummonerModule.class).getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
-
-		SummonerModule module = api.callModule(SummonerModule.class);
-		
-		module.getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
-
-
+		api.callModule(ChampionModule.class).getChampion(Locale.KR, true);
+		//api.callModule(SummonerModule.class).getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
 	}
 	
 }
