@@ -1,18 +1,27 @@
 package com.leelab.riotapi.apis;
 
 import com.leelab.riotapi.RestClient;
+import com.leelab.riotapi.utils.ReflectionUtils;
 
 public class RiotApi {
 	private RestClient getter;
 	private RiotAPISpec apiSpec;
 
-	/*
-	 * https://kr.api.pvp.net/api/lol/kr/v1.4/summoner/by-name/±â¼÷»çÂõ¾î?api_key=2bb3c69c-85bd-4e5e-addf-4ee9768b8505
-	 * */
-	public void getSummonerByName(Locale locale, String summonerName) {
-		
-		System.out.println(apiSpec.generate(locale)+"/summoner");
-		
+	public <T> T callModule(Class<T> clazz) {
+		try
+		{
+			T object = clazz.newInstance();
+			ReflectionUtils.setField(object, "spec", apiSpec);
+			return object;
+		}
+		catch (InstantiationException e)
+		{
+			e.printStackTrace();
+		}
+		catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	public RestClient getGetter() {
