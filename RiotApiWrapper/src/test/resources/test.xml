@@ -9,7 +9,6 @@
 
 	<beans:bean id="apiSpec" class="com.leelab.riotapi.apis.RiotAPISpec">
 		<beans:property name="api_key" value="2bb3c69c-85bd-4e5e-addf-4ee9768b8505"/>
-		<beans:property name="version" value="v1.4"/>
 	</beans:bean>
 	
 	<beans:bean id="restClient" class="com.leelab.riotapi.APIGetter"/>
