@@ -11,7 +11,12 @@
 	<%@ include file="../page-header.jsp" %>
 	
 	<div class="container">
-		<%@ include file="summoner-section.jsp" %>
+		<div style="border: 1px solid black;">
+			<%@ include file="summoner-header.jsp" %>
+		</div>
+		<div style="border: 1px solid black;">
+			<%@ include file="summoner-section.jsp" %>
+		</div>
 	</div>
 	
 	<%@ include file="../page-footer.jsp" %>
