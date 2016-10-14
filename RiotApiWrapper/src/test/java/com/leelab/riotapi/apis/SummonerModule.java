@@ -15,9 +15,6 @@ public class SummonerModule extends APIModule {
 	public Summoner getSummonerByName(Locale locale, String summonerName) {
 		String requestURI = getSpec().generate(locale,"v1.4")+"/summoner/by-name/"+summonerName+"?api_key="+getSpec().getApi_key();
 		JSONObject obj = getClient().request(requestURI);
-		
-		JSONObject jj = (JSONObject) obj.get(summonerName);
-		
 		return DTOMapper.mappingForObject((JSONObject)obj.get(summonerName), Summoner.class);
 	}
 	
