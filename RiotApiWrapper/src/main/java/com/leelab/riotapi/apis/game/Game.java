@@ -1,4 +1,4 @@
-package com.leelab.riotapi.game;
+package com.leelab.riotapi.apis.game;
 
 import java.util.ArrayList;
 

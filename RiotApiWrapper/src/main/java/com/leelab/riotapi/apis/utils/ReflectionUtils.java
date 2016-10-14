@@ -1,4 +1,4 @@
-package com.leelab.riotapi.utils;
+package com.leelab.riotapi.apis.utils;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;

@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.leelab.riotapi.apis.RiotApi;
-import com.leelab.riotapi.apis.StaticChampionModule;
-import com.leelab.riotapi.champion.StaticChampion;
+import com.leelab.riotapi.apis.champion.StaticChampion;
+import com.leelab.riotapi.apis.module.StaticChampionModule;
 
 @Controller
 @RequestMapping("ajax")
@@ -23,12 +23,10 @@ public class AjaxController implements ApplicationContextAware {
 	@RequestMapping("championKey")
 	@ResponseBody
 	public HashMap<String, String> a(@RequestParam HashMap<String, Object> param) {
-		
 		RiotApi api = ctx.getBean("api", RiotApi.class);
 		HashMap<String, String> map = new HashMap<String, String>();
 		StaticChampion sChamp = api.callModule(StaticChampionModule.class).getChampionDataById(Long.parseLong(param.get("id").toString()));
 		map.put("key", sChamp.getKey());
-		System.out.println(sChamp);
 		return map;
 	}
 

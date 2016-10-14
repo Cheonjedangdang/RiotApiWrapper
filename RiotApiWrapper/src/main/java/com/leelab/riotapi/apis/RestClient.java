@@ -1,4 +1,4 @@
-package com.leelab.riotapi;
+package com.leelab.riotapi.apis;
 
 import org.json.simple.JSONObject;
 

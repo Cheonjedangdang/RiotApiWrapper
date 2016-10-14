@@ -1,6 +1,6 @@
-package com.leelab.riotapi.utils;
+package com.leelab.riotapi.apis.utils;
 
-import static com.leelab.riotapi.utils.ReflectionUtils.*;
+import static com.leelab.riotapi.apis.utils.ReflectionUtils.*;
 
 import java.util.ArrayList;
 import java.util.Set;
