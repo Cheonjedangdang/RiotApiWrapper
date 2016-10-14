@@ -38,6 +38,27 @@ public class DTOMapper {
 		return instance;
 	}
 	
+	public static <T> T mappingForObject(JSONObject obj, Class<T> clazz,boolean isRequire, String...ignoreKeys) {
+		
+		T instance = createInstance(clazz);
+		
+		@SuppressWarnings("unchecked")
+		Set<String> keys = obj.keySet();
+
+		for(String key : keys)
+		{
+			for(String ignore : ignoreKeys)
+			{
+				if(ignore.equals(key))
+				{
+					setField(instance, key, obj.get(key));
+				}
+			}
+		}
+		
+		return instance;
+	}
+	
 	public static Object mappingObjectWithStrategy(JSONObject obj, InlineMapper mapper) {
 		return mapper.inlineMapping(obj);
 	}

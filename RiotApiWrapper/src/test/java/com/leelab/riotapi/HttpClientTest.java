@@ -47,23 +47,23 @@ public class HttpClientTest {
 	public void test() throws URISyntaxException, IOException {
 		//championModule.getChampion(Locale.KR, true);
 		//Summoner s = summonerModule.getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
-		ArrayList<Game> games = gameModule.getRecentGamesBySummonerId(Locale.KR, 10009456);
-		
-		for(Game game : games)
-		{
-			System.out.println(game);
-		}
-		
-//		File f = new File(this.getClass().getResource("/test/resources/input").toURI().getPath());
-//		BufferedReader br = new BufferedReader(new FileReader(f));
+//		ArrayList<Game> games = gameModule.getRecentGamesBySummonerId(Locale.KR, 10009456);
 //		
-//		while(true)
+//		for(Game game : games)
 //		{
-//			String s = br.readLine();
-//			if(s==null)break;
-//			String[] a = s.split("\t");
-//			System.out.println("private "+a[1]+" "+a[0]+";");
+//			System.out.println(game);
 //		}
+//		
+		File f = new File(this.getClass().getResource("/test/resources/input").toURI().getPath());
+		BufferedReader br = new BufferedReader(new FileReader(f));
+		
+		while(true)
+		{
+			String s = br.readLine();
+			if(s==null)break;
+			String[] a = s.split("\t");
+			System.out.println("private "+a[1]+" "+a[0]+";");
+		}
 		
 	}
 	
