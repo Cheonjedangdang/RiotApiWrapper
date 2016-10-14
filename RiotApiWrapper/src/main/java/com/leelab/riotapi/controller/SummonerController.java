@@ -7,9 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.leelab.riotapi.apis.Locale;
 import com.leelab.riotapi.apis.RiotApi;
-import com.leelab.riotapi.apis.SummonerModule;
+import com.leelab.riotapi.service.SummonerSearchService;
 
 @Controller
 @RequestMapping(value="summoner")
@@ -23,7 +22,7 @@ public class SummonerController {
 	@RequestMapping(value="search")
 	public String search(String summonerName, Model model) {
 		logger.info("Search summoner by name : "+summonerName);
-		model.addAttribute("summoner", api.callModule(SummonerModule.class).getSummonerByName(Locale.KR, summonerName));
+		new SummonerSearchService().execute(api, summonerName, model);
 		return "summoner/summoner";
 	}
 	
