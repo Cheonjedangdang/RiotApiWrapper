@@ -24,7 +24,7 @@ public class Game {
 	public long getChampionId() {
 		return championId;
 	}
-
+	
 	public void setChampionId(long championId) {
 		this.championId = championId;
 	}
