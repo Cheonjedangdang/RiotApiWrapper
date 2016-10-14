@@ -1,5 +1,13 @@
 package com.leelab.riotapi;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +21,8 @@ import com.leelab.riotapi.apis.GameModule;
 import com.leelab.riotapi.apis.Locale;
 import com.leelab.riotapi.apis.RiotApi;
 import com.leelab.riotapi.apis.SummonerModule;
+import com.leelab.riotapi.game.Game;
+import com.leelab.riotapi.summoner.Summoner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"/test.xml"})
@@ -34,9 +44,27 @@ public class HttpClientTest {
 	}
 	
 	@Test
-	public void test() {
-		summonerModule.getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
-		gameModule.getRecentGamesBySummonerId(Locale.KR, 10009456);
+	public void test() throws URISyntaxException, IOException {
+		//championModule.getChampion(Locale.KR, true);
+		//Summoner s = summonerModule.getSummonerByName(Locale.KR, "±â¼÷»çÂõ¾î");
+		ArrayList<Game> games = gameModule.getRecentGamesBySummonerId(Locale.KR, 10009456);
+		
+		for(Game game : games)
+		{
+			System.out.println(game);
+		}
+		
+//		File f = new File(this.getClass().getResource("/test/resources/input").toURI().getPath());
+//		BufferedReader br = new BufferedReader(new FileReader(f));
+//		
+//		while(true)
+//		{
+//			String s = br.readLine();
+//			if(s==null)break;
+//			String[] a = s.split("\t");
+//			System.out.println("private "+a[1]+" "+a[0]+";");
+//		}
+		
 	}
 	
 }

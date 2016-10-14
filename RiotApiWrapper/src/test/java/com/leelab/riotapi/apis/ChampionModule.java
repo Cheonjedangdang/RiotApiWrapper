@@ -11,8 +11,7 @@ public class ChampionModule extends APIModule{
 	}
 	
 	public String getChampion(Locale locale, boolean freeToPlay){
-		getSpec().setVersion("v1.2");
-		String requestURL = getSpec().generate(locale)+"/champion?freeToPlay="+freeToPlay+"&api_key="+getSpec().getApi_key();
+		String requestURL = getSpec().generate(locale,"v1.2")+"/champion?freeToPlay="+freeToPlay+"&api_key="+getSpec().getApi_key();
 		JSONObject obj = getClient().request(requestURL);
 		System.out.println(obj.toJSONString());
 		//System.out.println(spec.generate(locale)+"/champion?freeToPlay="+freeToPlay+"&api_key="+spec.getApi_key());
@@ -20,8 +19,7 @@ public class ChampionModule extends APIModule{
 	}
 
 	public String getChampionNumber(Locale locale, long id){
-		getSpec().setVersion("v1.2");
-		String requestURL = getSpec().generate(locale)+"/champion/"+id+"?api_key="+getSpec().getApi_key();
+		String requestURL = getSpec().generate(locale,"v1.2")+"/champion/"+id+"?api_key="+getSpec().getApi_key();
 		System.out.println(requestURL);
 		JSONObject obj = getClient().request(requestURL);
 		System.out.println(obj.toJSONString());
