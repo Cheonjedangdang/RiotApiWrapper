@@ -1,30 +1,30 @@
 package com.leelab.riotapi.apis.league;
 
 public class LeagueEntry {
-	private String divition;
-	private boolean isFreshBood;
+	private String division;
+	private boolean isFreshBlood;
 	private boolean isHotStreak;
 	private boolean isInactive;
 	private boolean isVeteran;
-	private int leaguePoints;
-	private int losses;
+	private long leaguePoints;
+	private long losses;
 	private MiniSeries miniSeries;
 	private String playerOrTeamId;
 	private String playerOrTeamName;
 	private String playstyle;
-	private int wins;
+	private long wins;
 	
-	public String getDivition() {
-		return divition;
+	public String getDivision() {
+		return division;
 	}
-	public void setDivition(String divition) {
-		this.divition = divition;
+	public void setDivision(String division) {
+		this.division = division;
 	}
-	public boolean isFreshBood() {
-		return isFreshBood;
+	public boolean isFreshBlood() {
+		return isFreshBlood;
 	}
-	public void setFreshBood(boolean isFreshBood) {
-		this.isFreshBood = isFreshBood;
+	public void setFreshBlood(boolean isFreshBlood) {
+		this.isFreshBlood = isFreshBlood;
 	}
 	public boolean isHotStreak() {
 		return isHotStreak;
@@ -44,16 +44,16 @@ public class LeagueEntry {
 	public void setVeteran(boolean isVeteran) {
 		this.isVeteran = isVeteran;
 	}
-	public int getLeaguePoints() {
+	public long getLeaguePoints() {
 		return leaguePoints;
 	}
-	public void setLeaguePoints(int leaguePoints) {
+	public void setLeaguePoints(long leaguePoints) {
 		this.leaguePoints = leaguePoints;
 	}
-	public int getLosses() {
+	public long getLosses() {
 		return losses;
 	}
-	public void setLosses(int losses) {
+	public void setLosses(long losses) {
 		this.losses = losses;
 	}
 	public MiniSeries getMiniSeries() {
@@ -80,11 +80,18 @@ public class LeagueEntry {
 	public void setPlaystyle(String playstyle) {
 		this.playstyle = playstyle;
 	}
-	public int getWins() {
+	public long getWins() {
 		return wins;
 	}
-	public void setWins(int wins) {
+	public void setWins(long wins) {
 		this.wins = wins;
+	}
+	@Override
+	public String toString() {
+		return "LeagueEntry [division=" + division + ", isFreshBlood=" + isFreshBlood + ", isHotStreak=" + isHotStreak
+				+ ", isInactive=" + isInactive + ", isVeteran=" + isVeteran + ", leaguePoints=" + leaguePoints
+				+ ", losses=" + losses + ", miniSeries=" + miniSeries + ", playerOrTeamId=" + playerOrTeamId
+				+ ", playerOrTeamName=" + playerOrTeamName + ", playstyle=" + playstyle + ", wins=" + wins + "]";
 	}
 	
 }

@@ -8,7 +8,7 @@
 			<td><h3>${summoner.name}</h3></td>
 		</tr>
 		<tr>
-			<td><h5>래더랭킹:</h5></td>
+			<td><h5>${lwt.tier} ${lwt.entry.division}</h5></td>
 		</tr>
 		<tr>
 			<td><h6>Lv ${summoner.summonerLevel}</h6></td>

@@ -9,7 +9,9 @@ import org.springframework.ui.Model;
 import com.leelab.riotapi.apis.Locale;
 import com.leelab.riotapi.apis.RiotApi;
 import com.leelab.riotapi.apis.game.Game;
+import com.leelab.riotapi.apis.league.LeagueEntryWithTier;
 import com.leelab.riotapi.apis.module.GameModule;
+import com.leelab.riotapi.apis.module.LeagueModule;
 import com.leelab.riotapi.apis.module.SummonerModule;
 import com.leelab.riotapi.apis.summoner.Summoner;
 
@@ -24,9 +26,11 @@ public class SummonerSearchService extends Service{
     	
     	Summoner summoner = api.callModule(SummonerModule.class).getSummonerByName(Locale.KR, summonerName);
     	ArrayList<Game> games = api.callModule(GameModule.class).getRecentGamesBySummonerId(Locale.KR, summoner.getId());
-      
+    	LeagueEntryWithTier lwt = api.callModule(LeagueModule.class).getLeagueEntryBySummonerId(Locale.KR, summoner.getId());
+    	
     	model.addAttribute("summoner", summoner);
     	model.addAttribute("games", games);
+    	model.addAttribute("lwt", lwt);
     }
    
 }
