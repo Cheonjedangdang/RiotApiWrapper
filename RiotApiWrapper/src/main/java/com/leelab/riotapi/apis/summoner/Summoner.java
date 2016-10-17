@@ -1,4 +1,4 @@
-package com.leelab.riotapi.summoner;
+package com.leelab.riotapi.apis.summoner;
 
 public class Summoner {
 	private long profileIconId;

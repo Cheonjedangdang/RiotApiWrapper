@@ -21,17 +21,13 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<beans:bean id="apiSpec" class="com.leelab.riotapi.apis.RiotAPISpec">
-		<beans:property name="api_key" value="2bb3c69c-85bd-4e5e-addf-4ee9768b8505"/>
-	</beans:bean>
-	
-	<beans:bean id="restClient" class="com.leelab.riotapi.APIGetter"/>
+	<beans:bean id="restClient" class="com.leelab.riotapi.apis.APIGetter"/>
 	
 	<beans:bean id="api" class="com.leelab.riotapi.apis.RiotApi">
-		<beans:property name="apiSpec" ref="apiSpec"/>
+		<beans:property name="apiKey" value="2bb3c69c-85bd-4e5e-addf-4ee9768b8505"/>
 		<beans:property name="getter" ref="restClient"/>
 	</beans:bean>
 	
-	<context:component-scan base-package="com.leelab.riotapi" />
+	<context:component-scan base-package="com.leelab.riotapi.controller" />
 
 </beans:beans>

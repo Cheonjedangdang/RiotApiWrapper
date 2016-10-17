@@ -1,4 +1,4 @@
-package com.leelab.riotapi;
+package test.leelab.riotapi;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -16,13 +16,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.leelab.riotapi.apis.ChampionModule;
-import com.leelab.riotapi.apis.GameModule;
 import com.leelab.riotapi.apis.Locale;
 import com.leelab.riotapi.apis.RiotApi;
-import com.leelab.riotapi.apis.SummonerModule;
-import com.leelab.riotapi.game.Game;
-import com.leelab.riotapi.summoner.Summoner;
+import com.leelab.riotapi.apis.game.Game;
+import com.leelab.riotapi.apis.module.ChampionModule;
+import com.leelab.riotapi.apis.module.GameModule;
+import com.leelab.riotapi.apis.module.SummonerModule;
+import com.leelab.riotapi.apis.summoner.Summoner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"/test.xml"})

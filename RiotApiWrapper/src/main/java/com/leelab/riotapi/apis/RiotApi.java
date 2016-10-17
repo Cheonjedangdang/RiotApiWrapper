@@ -1,14 +1,13 @@
 package com.leelab.riotapi.apis;
 
-import com.leelab.riotapi.RestClient;
-import com.leelab.riotapi.utils.ReflectionUtils;
+import com.leelab.riotapi.apis.utils.ReflectionUtils;
 
 public class RiotApi {
 	private RestClient getter;
-	private RiotAPISpec apiSpec;
+	private String apiKey;
 
 	public <T> T callModule(Class<T> clazz) {
-		T object = ReflectionUtils.createInstance(ReflectionUtils.getConstructor(clazz, RiotAPISpec.class, RestClient.class), apiSpec, getter);
+		T object = ReflectionUtils.createInstance(ReflectionUtils.getConstructor(clazz, String.class, RestClient.class), apiKey, getter);
 		return object;
 	}
 	
@@ -18,10 +17,13 @@ public class RiotApi {
 	public void setGetter(RestClient getter) {
 		this.getter = getter;
 	}
-	public RiotAPISpec getApiSpec() {
-		return apiSpec;
+
+	public String getApiKey() {
+		return apiKey;
 	}
-	public void setApiSpec(RiotAPISpec apiSpec) {
-		this.apiSpec = apiSpec;
+
+	public void setApiKey(String apiKey) {
+		this.apiKey = apiKey;
 	}
+	
 }

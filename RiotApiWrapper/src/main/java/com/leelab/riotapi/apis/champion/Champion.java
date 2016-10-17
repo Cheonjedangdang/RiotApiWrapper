@@ -1,4 +1,4 @@
-package com.leelab.riotapi.champion;
+package com.leelab.riotapi.apis.champion;
 
 public class Champion {
 	

@@ -1,4 +1,4 @@
-package com.leelab.riotapi.game;
+package com.leelab.riotapi.apis.game;
 
 public class FellowPlayer {
 	private long championId;
