@@ -5,7 +5,7 @@
 %>
 
 <c:forEach items="${games}" var="game">	
-	<div>
+	<div class="">
 		
 	</div>		
 </c:forEach>
