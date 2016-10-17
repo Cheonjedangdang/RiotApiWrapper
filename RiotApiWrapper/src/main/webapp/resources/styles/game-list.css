@@ -1,0 +1,32 @@
+.game-list {
+	text-align: center;
+}
+
+.game-list .listitem {
+	display: flex;
+}
+
+.game-list .info {
+	flex : 1;
+}
+
+.game-list .play {
+	flex : 4;
+	display: flex;
+}
+
+.game-list .play .play-info {
+	flex : 1;
+}
+
+.game-list .play .kda-info {
+	flex : 2;
+}
+
+.game-list .play .item {
+	flex : 1;
+}
+
+.game-list .team {
+	flex : 2;
+}
