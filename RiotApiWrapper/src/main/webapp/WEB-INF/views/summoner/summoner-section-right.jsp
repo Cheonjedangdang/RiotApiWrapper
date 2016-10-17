@@ -17,7 +17,9 @@
 				ㅁㅁ
 			</td>
 			<td width="50px"><img id="${game.createDate}" class="s_r_img" src=""><script>getImage(${game.championId},${game.createDate})</script></td>
-			<td>${game.spell1} ${game.spell2}</td>
+			<td>
+				${game.spell1} ${game.spell2}
+			</td>
 			<td>${game.gameMode}</td>
 			<td>${game.gameType}</td>
 			<td>${game.teamId}</td>
