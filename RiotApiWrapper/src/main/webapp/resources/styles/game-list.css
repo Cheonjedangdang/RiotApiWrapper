@@ -3,36 +3,137 @@
 	vertical-align: middle;
 }
 
-.game-list .listitem {
+.listitem-true {
 	display: flex;
 	height: 100px;
 	text-align: center;
 	vertical-align: middle;
+	margin: 5px;
+	background-color: #a3cfec;
+    border-color: #99b9cf;
 }
 
-.game-list .info {
+.listitem-false {
+	display: flex;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 5px;
+	background-color: #e2b6b3;
+    border-color: #cea7a7;
+}
+
+.info {
 	flex : 1;
+	display: table-cell;
 }
 
-.game-list .play {
+.gType {
+	margin-top : 10px;
+	height : 15px;
+}
+
+.game-type {
+	margin-top : 7px;
+	font-size: 13px;
+    color: #555;
+    font-weight: bold;
+}
+
+.gameResult {
+	font-size: 15px;
+}
+
+.time-diff {
+	margin-top : 6px;
+	height: 12px;
+}
+
+.timeDiff {
+	font-size: 12px;
+    color: #555;
+    font-weight: bold;    
+}
+
+.game-result {
+	margin-top :10px;
+}
+
+.play-time {
+	margin-top : 6px;
+	height: 12px;	
+}
+
+.playTime {
+	font-size: 11px;
+    color: #555;
+    font-weight: bold;
+}
+
+.play {
 	flex : 4;
 	display: flex;
 }
 
-.game-list .play .play-info {
+.play-info {
 	flex : 1;
-	display: table-cell;
-	vertical-align: middle;
+	display: inline-block;
+    vertical-align: middle;
 }
 
-.game-list .play .kda-info {
+.s_r_img {
+	margin-top : 23px;
+	border-radius: 50em;
+	width : 50px;
+}
+
+.kda-info {
 	flex : 2;
+  	display : table-cell;
 }
 
-.game-list .play .item {
+.kda {
+	margin-top : 30px;
+	height: 20px;
+}
+
+.kda-ratio {
+	height: 10px;
+}
+
+.kill {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.death {
+	color: #c6443e;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.assist {
+	font-weight: bold;	
+	font-size: 15px;
+}
+
+.ratio {
+	color: #555e5e;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.item {
 	flex : 1;
+  display : inline;
+  line-height : 100px;
+  vertical-align : middle;
 }
 
-.game-list .team {
+.team {
 	flex : 2;
+  display : inline;
+  line-height : 100px;
+  vertical-align : middle;
 }
