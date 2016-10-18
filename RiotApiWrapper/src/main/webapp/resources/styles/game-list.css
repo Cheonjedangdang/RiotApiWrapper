@@ -1,9 +1,13 @@
 .game-list {
 	text-align: center;
+	vertical-align: middle;
 }
 
 .game-list .listitem {
 	display: flex;
+	height: 100px;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .game-list .info {
@@ -17,6 +21,8 @@
 
 .game-list .play .play-info {
 	flex : 1;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .game-list .play .kda-info {
