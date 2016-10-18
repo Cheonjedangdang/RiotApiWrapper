@@ -9,6 +9,7 @@
 		</tr>
 		<tr>
 			<td><h5>${lwt.tier} ${lwt.entry.division}</h5></td>
+			<td><h1></h1></td>
 		</tr>
 		<tr>
 			<td><h6>Lv ${summoner.summonerLevel}</h6></td>
