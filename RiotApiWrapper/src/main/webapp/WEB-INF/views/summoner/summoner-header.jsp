@@ -24,8 +24,8 @@
 		<div class="Buttons">
 			<button class="Button SemiRound Blue" id="SummonerRefreschButton" onClick=""; style="postion: relative;">전적갱신</button>
 			<button class="Button SemiRound White" id="SpectateButton" onClick="">인게임 정보</button>
-			<button class="Button SemiRound white"  onClick="">MMR체크</button>
-			<button class="Button SemiRound white"  onClick="">티어 그래프</button>
+			<button class="Button SemiRound White"  onClick="">MMR체크</button>
+			<button class="Button SemiRound White"  onClick="">티어 그래프</button>
 		</div>
 	</div>
 </div>

@@ -11,10 +11,11 @@
 	<%@ include file="../page-header.jsp" %>
 	
 	<div class="container">
-		<div style="border: 1px solid black;">
+	<!-- style="border: 1px solid black;" -->
+		<div>
 			<%@ include file="summoner-header.jsp" %>
 		</div>
-		<div style="border: 1px solid black;">
+		<div >
 			<%@ include file="summoner-section.jsp" %>
 		</div>
 	</div>
