@@ -17,4 +17,10 @@ public class HomeController {
 		return "home/home";
 	}
 	
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	public String main() {
+		logger.info("Welcome home! The new client!");
+		return "home/home";
+	}
+	
 }
