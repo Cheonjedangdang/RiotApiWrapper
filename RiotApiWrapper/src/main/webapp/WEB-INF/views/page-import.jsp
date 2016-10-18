@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="<c:url value="/resources/styles/bootstrap.min.css"/>"/>
 <link rel="stylesheet" href="<c:url value="/resources/styles/comp.css"/>"/>
 <link rel="stylesheet" href="<c:url value="/resources/styles/game-list.css"/>"/>
+<link rel="stylesheet" href="<c:url value="/resources/styles/header.css"/>"/>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="<c:url value="/resources/scripts/bootstrap.min.js"/>"></script>

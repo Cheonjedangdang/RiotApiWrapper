@@ -1,0 +1,89 @@
+.Header {
+	position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+}
+.Header .Face {
+    display: inline-block;
+    width: 100px;
+    padding-left: 30px;
+    vertical-align: top;
+}
+.Header .Face .ProfileIcon {
+    position: relative;
+}
+.Header .Face .ProfileIcon .borderImage {
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 120px;
+    height: 120px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.Header .Face .ProfileIcon .ProfileImage {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+.Header .Profile {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    margin: 0 25px 0 25px;
+    vertical-align: top;
+    line-height: 1.1;
+}
+>.Header .Profile .Information .Name {
+    color: #242929;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.Header .Profile .Information .FavoriteButton {
+    margin-left: 4px;
+    vertical-align: 1px;
+    text-decoration: none;
+    color: #777;
+    display: inline-block;
+    border: 1px solid #c6cbcb;
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 10px;
+}
+.Header .Profile .Buttons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 0;
+    margin: 15px 0 -6px;
+    white-space: nowrap;
+}
+.Header .Profile .Buttons .Button {
+    margin: 0 6px 6px 0;
+}
+.Button.SemiRound.Blue {
+    border: 1px solid #1a78ae;
+    background: #1f8ecd;
+    color: #f2f2f2;
+}
+.Button.SemiRound.White {
+    border: 1px solid #ccd1d1;
+    background: #f2f2f2;
+    color: #242929;
+}
+.Button.SemiRound {
+    padding: 10px 14px;
+    border-radius: 2px;
+    border: none;
+    background: none;
+    font-size: 14px;
+}
+.Button {
+    text-align: center;
+}
+
